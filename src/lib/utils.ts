@@ -54,8 +54,6 @@ export function getStartSeconds(
   params: { remainingWords: number; round: number; speed: GameSpeed },
   cfg: Partial<StartTimeConfig> = {}
 ) {
-  return 5;
-
   const c: StartTimeConfig = { ...defaultStartTimeConfig, ...cfg };
   const remaining = Math.max(0, Math.floor(params.remainingWords));
   const round = Math.max(1, Math.floor(params.round));
