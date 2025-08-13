@@ -1,0 +1,58 @@
+// The pack of countries which are recognized by the United Nations (193 UN member states)
+
+import { createPack } from '../create-pack';
+
+export const landlockedCountries = createPack(
+  'Landlocked Countries',
+  {
+    en: [
+      'Afghanistan',
+      'Andorra',
+      'Armenia',
+      'Austria',
+      'Azerbaijan',
+      'Belarus',
+      'Bhutan',
+      'Bolivia',
+      'Botswana',
+      'Burkina Faso',
+      'Burundi',
+      { main: 'Central African Republic', regexes: [/central african?/i] },
+      'Chad',
+      { main: 'Czechia', regexes: [/czech/i, /czech republic/i] },
+      'Eswatini',
+      'Ethiopia',
+      'Hungary',
+      'Kazakhstan',
+      'Kyrgyzstan',
+      'Laos',
+      'Lesotho',
+      'Liechtenstein',
+      'Luxembourg',
+      'Malawi',
+      'Mali',
+      'Moldova',
+      'Mongolia',
+      'Nepal',
+      'Niger',
+      'North Macedonia',
+      'Paraguay',
+      'Rwanda',
+      'San Marino',
+      'Serbia',
+      'Slovakia',
+      'South Sudan',
+      'Switzerland',
+      'Tajikistan',
+      'Turkmenistan',
+      'Uganda',
+      'Uzbekistan',
+      'Zambia',
+      'Zimbabwe',
+    ],
+  },
+  {
+    description: 'The list of countries which are landlocked (no ocean access)',
+    category: ['Geography', 'World', 'Countries'],
+  }
+);
