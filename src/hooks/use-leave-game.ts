@@ -1,7 +1,6 @@
 import { useGameStore } from '../stores/game.store';
 import { usePlayersStore } from '../stores/players.store';
 import { useWords } from './use-words';
-import { useGameConfigStore } from '../stores/game-config.store';
 import { toast } from 'sonner';
 
 export function useLeaveGame() {

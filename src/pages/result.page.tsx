@@ -1,7 +1,6 @@
 import { Card, Stack, Title, Text, Badge, Group, SimpleGrid, Button } from '@mantine/core';
 import { useGameStore } from '../stores/game.store';
 import { usePlayersStore } from '../stores/players.store';
-import { useGamePackStore } from '../stores/game-pack.store';
 import { useWords } from '../hooks/use-words';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
