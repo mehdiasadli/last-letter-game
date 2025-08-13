@@ -5,11 +5,9 @@ import { useGameConfigStore } from '../stores/game-config.store';
 import { toast } from 'sonner';
 
 export function useLeaveGame() {
-  const { currentPlayer, currentRound, currentLetter, usedWords, checkGameEndCondition, endGame, nextPlayerOnTimeout } =
-    useGameStore();
+  const { currentLetter, usedWords, checkGameEndCondition, endGame, nextPlayerOnTimeout } = useGameStore();
   const { players, eliminatePlayer } = usePlayersStore();
   const words = useWords();
-  const { gameSpeed } = useGameConfigStore();
 
   const handleLeaveGame = (playerName: string) => {
     // Eliminate the player
@@ -28,9 +26,7 @@ export function useLeaveGame() {
       .map((w) => w.main);
 
     // Get updated players after elimination
-    const updatedPlayers = players.map(p => 
-      p.name === playerName ? { ...p, eliminated: true } : p
-    );
+    const updatedPlayers = players.map((p) => (p.name === playerName ? { ...p, eliminated: true } : p));
 
     // Check game end condition with updated players
     const gameEndCondition = checkGameEndCondition(updatedPlayers, availableWords);

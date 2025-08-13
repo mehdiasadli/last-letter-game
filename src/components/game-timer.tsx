@@ -9,7 +9,7 @@ export function GameTimer({ time }: { time: string }) {
   const { hasTimer, soundEnabled } = useGameConfigStore();
   const { timerPulse, timerUrgency } = useAnimations();
   const lastTimeRef = useRef<number>(0);
-  const urgentIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const urgentIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const timeNumber = time.split(':').reduce((acc, part, index) => {
     if (index === 0) {

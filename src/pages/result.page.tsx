@@ -9,7 +9,6 @@ import { useEffect } from 'react';
 export default function ResultPage() {
   const { players, resetEliminatedStatus } = usePlayersStore();
   const { currentLetter, usedWords, gameEnded, winner, winners, reset: resetGame } = useGameStore();
-  const { pack } = useGamePackStore();
   const words = useWords();
   const navigate = useNavigate();
 
@@ -25,7 +24,6 @@ export default function ResultPage() {
     return null;
   }
 
-  const alivePlayers = players.filter((p) => !p.eliminated);
   const eliminatedPlayers = players.filter((p) => p.eliminated);
 
   // Get remaining words for the current letter
